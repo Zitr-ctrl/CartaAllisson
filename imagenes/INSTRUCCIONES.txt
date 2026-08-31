@@ -1,0 +1,73 @@
+📸 INSTRUCCIONES PARA AÑADIR TUS FOTOS
+========================================
+
+¡Sigue estos pasos para añadir tus fotos en la carta!
+
+PASO 1: Copia tus fotos aquí
+-----------------------------
+- Copia las fotos que quieras añadir a esta carpeta "imagenes"
+- Puedes usar formatos: .jpg, .jpeg, .png, .webp
+
+PASO 2: Renombra tus fotos
+---------------------------
+Para que funcione automáticamente, renombra tus fotos así:
+- foto1.jpg (o .png)
+- foto2.jpg (o .png)
+- foto3.jpg (o .png)
+- foto4.jpg (o .png)
+
+PASO 3: Actualiza el archivo HTML
+----------------------------------
+1. Abre el archivo "index.html" con un editor de texto
+   (Notepad, VS Code, Sublime Text, etc.)
+
+2. Busca la sección de la galería de fotos (busca "photo-gallery")
+
+3. Reemplaza los divs "photo-placeholder" por imágenes así:
+
+   ANTES:
+   <div class="photo-frame">
+       <div class="photo-placeholder">
+           <span>📷</span>
+           <p>Foto 1</p>
+       </div>
+   </div>
+
+   DESPUÉS:
+   <div class="photo-frame">
+       <img src="imagenes/foto1.jpg" alt="Momento especial 1">
+   </div>
+
+4. Haz lo mismo para las otras fotos (foto2, foto3, foto4)
+
+PASO 4: ¡Listo!
+----------------
+- Guarda los cambios en index.html
+- Abre index.html en tu navegador
+- ¡Disfruta tu carta con fotos!
+
+
+📁 ESTRUCTURA DE ARCHIVOS:
+==========================
+Carta Allisson Cumpleaños/
+├── index.html          ← Ábrelo en el navegador
+├── styles.css          ← Estilos de la carta
+├── script.js           ← Efectos y animaciones
+├── imagenes/           ← Pon tus fotos aquí
+│   ├── foto1.jpg       ← Tu primera foto
+│   ├── foto2.jpg       ← Tu segunda foto
+│   ├── foto3.jpg       ← Tu tercera foto
+│   ├── foto4.jpg       ← Tu cuarta foto
+│   └── INSTRUCCIONES.txt ← Este archivo
+
+
+💡 CONSEJOS:
+============
+- Usa fotos de buena calidad para mejor resultado
+- Las fotos cuadradas o cercanas funcionan mejor
+- Puedes usar más o menos de 4 fotos si lo deseas
+- Si quieres añadir más fotos, copia y pega más 
+  "photo-frame" en el HTML
+
+
+¡Feliz Cumpleaños Allisson! 🎂🎉❤️
