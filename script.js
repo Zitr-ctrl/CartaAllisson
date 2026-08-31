@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
     const envelope = document.getElementById("envelope");
     const letter = document.getElementById("letter");
     const particlesContainer = document.getElementById("particles");
@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function openEnvelope() {
         envelope.classList.add("opened");
 
-        // Ocultar el contenedor del sobre para liberar espacio
         const envelopeWrapper = document.querySelector(".envelope-wrapper");
         setTimeout(() => {
             envelopeWrapper.classList.add("hidden");
@@ -40,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function startParticles() {
-        const hearts = ["??", "??", "??", "?", "??"];
+        const hearts = ["❤️", "💛", "💖", "✨", "🌟"];
         setInterval(() => {
             if (document.querySelector(".letter.visible")) {
                 createParticle(hearts[Math.floor(Math.random() * hearts.length)]);
@@ -53,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         particle.className = "particle";
         particle.textContent = emoji;
         particle.style.left = Math.random() * 100 + "vw";
+        particle.style.top = "100vh";
         particle.style.animationDuration = (Math.random() * 3 + 4) + "s";
         particle.style.fontSize = (Math.random() * 10 + 15) + "px";
         particlesContainer.appendChild(particle);
@@ -99,7 +99,4 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
         }
     });
-
-    console.log("%c?? Feliz Cumpleanos Allisson! ??", "color: #FFD700; font-size: 24px; font-weight: bold; text-shadow: 2px 2px 4px #000;");
 });
-
