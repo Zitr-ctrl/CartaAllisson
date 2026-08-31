@@ -1,4 +1,4 @@
-/* CARTA DE CUMPLEAÑOS - CSS CORREGIDO */
+/* CARTA DE CUMPLEANOS */
 :root {
     --yellow-primary: #FFD700;
     --yellow-light: #FFF3B0;
@@ -19,7 +19,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    overflow-x: hidden;
     position: relative;
 }
 
@@ -38,6 +37,19 @@ body::before {
     opacity: 0.5;
     pointer-events: none;
     z-index: 0;
+}
+
+/* ENVOLTURA DEL SOBRE */
+.envelope-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* OCULTAR ENVOLTURA DEL SOBRE */
+.envelope-wrapper.hidden {
+    display: none;
 }
 
 /* SOBRE */
@@ -103,11 +115,15 @@ body::before {
 /* CARTA */
 .letter {
     display: none;
-    width: 100%; max-width: 700px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
     background: linear-gradient(180deg, var(--cream), var(--white));
     border-radius: 5px;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 60px rgba(255, 215, 0, 0.2);
-    position: relative; overflow: hidden; z-index: 10;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
 }
 
 .letter.visible {
@@ -144,7 +160,9 @@ body::before {
 .message-section { margin: 25px 0; text-align: justify; }
 .message { font-size: 1rem; line-height: 1.8; color: var(--black-light); }
 
-/* GALERÍA DE FOTOS */
+
+
+/* GALERIA DE FOTOS */
 .photo-gallery { margin: 35px 0; text-align: center; }
 .photo-gallery h3 { font-family: "Dancing Script", cursive; font-size: 1.6rem; color: var(--black-primary); margin-bottom: 20px; }
 .photos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; max-width: 500px; margin: 0 auto; }
@@ -155,7 +173,7 @@ body::before {
 .photo-placeholder span { font-size: 2.5rem; margin-bottom: 5px; }
 .photo-placeholder p { font-size: 0.8rem; color: var(--black-light); font-weight: 600; }
 
-/* SECCIÓN DE DESEOS */
+/* SECCION DE DESEOS */
 .wishes-section { margin: 35px 0; text-align: center; }
 .wishes-section h3 { font-family: "Dancing Script", cursive; font-size: 1.6rem; color: var(--black-primary); margin-bottom: 20px; }
 .wishes-list { list-style: none; padding: 0; }
@@ -177,7 +195,7 @@ body::before {
 .hearts-decoration span:nth-child(5) { animation-delay: 0.8s; }
 .date { margin-top: 15px; font-size: 0.9rem; color: var(--black-light); font-weight: 600; }
 
-/* PARTÍCULAS Y EFECTOS */
+/* PARTICULAS Y EFECTOS */
 .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 50; overflow: hidden; }
 .particle { position: absolute; animation: particleFloat linear forwards; opacity: 0.8; }
 .confetti-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100; overflow: hidden; }
@@ -192,9 +210,7 @@ body::before {
 @keyframes particleFloat { 0% { transform: translateY(100vh) rotate(0deg); opacity: 1; } 100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; } }
 @keyframes confettiFall { 0% { transform: translateY(0) rotateZ(0deg); opacity: 1; } 100% { transform: translateY(100vh) rotateZ(720deg); opacity: 0; } }
 
-/* MEDIA QUERIES - RESPONSIVE */
-
-/* Tablets */
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
     .letter-header h1 { font-size: 2.2rem; }
     .letter-header h2 { font-size: 1.8rem; }
@@ -204,7 +220,6 @@ body::before {
     .message { font-size: 0.95rem; }
 }
 
-/* Móviles grandes */
 @media (max-width: 480px) {
     .envelope { width: 280px; height: 190px; }
     .heart-seal { width: 50px; height: 50px; }
@@ -223,7 +238,6 @@ body::before {
     .wishes-section h3, .photo-gallery h3 { font-size: 1.3rem; }
 }
 
-/* Móviles pequeños */
 @media (max-width: 360px) {
     .envelope { width: 250px; height: 170px; }
     .envelope-hint { font-size: 12px; bottom: -35px; }
@@ -236,3 +250,4 @@ body::before {
     .photos-grid { gap: 6px; }
     .hearts-decoration span { font-size: 1.2rem; }
 }
+
