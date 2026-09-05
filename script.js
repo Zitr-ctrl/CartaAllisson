@@ -100,3 +100,23 @@
         }
     });
 });
+
+function iniciarMusicaDeFondo(idAudio = 'miAudio') {
+  const audio = document.getElementById(idAudio);
+
+  if (!audio) {
+    console.warn(`No se encontró el elemento de audio con id "${idAudio}"`);
+    return;
+  }
+
+  document.addEventListener('click', () => {
+    audio.play().catch((error) => {
+      console.warn('No se pudo reproducir el audio:', error);
+    });
+  }, { once: true });
+}
+
+// Ejecutar automáticamente al cargar el DOM
+document.addEventListener('DOMContentLoaded', () => {
+  iniciarMusicaDeFondo('miAudio');
+});
